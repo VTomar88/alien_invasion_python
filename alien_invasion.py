@@ -13,7 +13,6 @@ def run_game():
     ))
     # Make ship
     ship = Ship(screen)
-    print(ship.rect)
 
     while True:
         for event in pygame.event.get():
