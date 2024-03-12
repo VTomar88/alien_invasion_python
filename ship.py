@@ -9,8 +9,6 @@ class Ship():
         self.image = pygame.image.load("pixabay_spaceship.bmp")
         self.image = pygame.transform.scale(self.image, (50,50))
         self.rect = self.image.get_rect()
-        # rect_x, rect_y, rect_width, rect_length = self.rect
-        # self.rect = rect(rect_x, rect_y, rect_width/10, rect_length/10)
         self.screen_rect = screen.get_rect()
 
         # start each new ship at the bottom center of the screen

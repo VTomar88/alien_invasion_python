@@ -1,4 +1,4 @@
-import sys
+import game_functions as gf
 import pygame
 from settings import Settings
 from ship import Ship
@@ -15,13 +15,7 @@ def run_game():
     ship = Ship(screen)
 
     while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-        # Redraw the screen during each pass through the loop.
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
-
-        pygame.display.flip()
+        gf.check_events()
+        gf.update_screen(ai_settings, screen, ship)
 
 run_game()
