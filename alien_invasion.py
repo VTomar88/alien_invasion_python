@@ -3,6 +3,7 @@ import pygame
 from settings import Settings
 from ship import Ship
 
+
 def run_game():
     # Initialize pygame, settings, and screen objects
     pygame.init()
@@ -17,5 +18,6 @@ def run_game():
     while True:
         gf.check_events()
         gf.update_screen(ai_settings, screen, ship)
+
 
 run_game()

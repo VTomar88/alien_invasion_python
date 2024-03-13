@@ -1,5 +1,6 @@
 import pygame
 
+
 class Ship():
     def __init__(self, screen):
         """ Initialize the ship and set its starting position"""
@@ -7,7 +8,7 @@ class Ship():
 
         # Load the ship image and get its rect
         self.image = pygame.image.load("pixabay_spaceship.bmp")
-        self.image = pygame.transform.scale(self.image, (50,50))
+        self.image = pygame.transform.scale(self.image, (50, 50))
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
