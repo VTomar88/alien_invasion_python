@@ -2,6 +2,7 @@ import game_functions as gf
 import pygame
 from settings import Settings
 from ship import Ship
+from alien import Alien
 
 def run_game():
     # Initialize pygame, settings, and screen objects
@@ -14,8 +15,11 @@ def run_game():
     # Make ship
     ship = Ship(screen)
 
+    # Make alien
+    alien = Alien(ai_settings, screen)
+
     while True:
         gf.check_events()
-        gf.update_screen(ai_settings, screen, ship)
+        gf.update_screen(ai_settings, screen, ship, alien)
 
 run_game()

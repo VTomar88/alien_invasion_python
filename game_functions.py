@@ -9,10 +9,11 @@ def check_events():
                 sys.exit()
 
 
-def update_screen(ai_settings, screen, ship):
+def update_screen(ai_settings, screen, alien, ship):
      """Update the images on the screen and flip to the new screen."""
      # Redraw the screen during each pass through the loop.
      screen.fill(ai_settings.bg_color)
      ship.blitme()
+     alien.blitme()
 
      pygame.display.flip()
